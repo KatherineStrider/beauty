@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BeautyStyle</string>
+
+    <string-array name="services">
+        <item>стрижка</item>
+        <item>покраска</item>
+        <item>маникюр</item>
+    </string-array>
 </resources>
