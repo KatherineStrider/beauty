@@ -1,5 +1,6 @@
 package com.example.kate.beautystyle;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onNameClick(int position, String name) {
             Toast.makeText(MainActivity.this, String.format("%s #%d", name, position), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+            startActivity(intent);
         }
     };
 }

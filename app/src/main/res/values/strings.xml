@@ -2,8 +2,14 @@
     <string name="app_name">BeautyStyle</string>
 
     <string-array name="services">
-        <item>стрижка</item>
-        <item>покраска</item>
-        <item>маникюр</item>
+        <item>Стрижка</item>
+        <item>Покраска</item>
+        <item>Маникюр</item>
+    </string-array>
+
+    <string-array name="type_services">
+        <item>Стрижка кота под льва</item>
+        <item>Лысик</item>
+        <item>Выстригание клочков шерсти</item>
     </string-array>
 </resources>

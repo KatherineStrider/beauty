@@ -70,13 +70,13 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             String url = "";
 
             switch (value){
-                case "стрижка":
+                case "Стрижка":
                     url = "https://pp.userapi.com/c405124/v405124786/532d/mU3dY12rZhM.jpg";
                     break;
-                case "покраска":
+                case "Покраска":
                     url = "http://n1s2.hsmedia.ru/41/6b/73/416b7303e40fb2ce0a4ba26786f33c63/600x322_1_c095cd8a5d2cff6e98ac8691784f1db4@600x322_0x59f91261_17955022721411752153.jpeg";
                     break;
-                case "маникюр":
+                case "Маникюр":
                     url = "http://dogcity.com.ua/wp-content/uploads/2017/01/IMG_9697.jpg";
                     break;
                 default:
