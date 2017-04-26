@@ -6,13 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ImageView imageView;
+    RecycleViewAdapter recyclerViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 .load("http://www.dandy-dogs.ru/template/images/banner2.png")
                 .into(imageView);
 
-        RecycleViewAdapter recyclerViewAdapter = new RecycleViewAdapter(this, getResources().getStringArray(R.array.services),onNameClickListener);
+        recyclerViewAdapter = new RecycleViewAdapter(this, getResources().getStringArray(R.array.services),onNameClickListener);
 
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -34,9 +34,15 @@ public class MainActivity extends AppCompatActivity {
     RecycleViewAdapter.OnNameClickListener onNameClickListener = new RecycleViewAdapter.OnNameClickListener() {
         @Override
         public void onNameClick(int position, String name) {
-            Toast.makeText(MainActivity.this, String.format("%s #%d", name, position), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
-            startActivity(intent);
+//            Toast.makeText(MainActivity.this, String.format("%s #%d", name, position), Toast.LENGTH_SHORT).show();
+            NumberOfDetails.setNumber1ForDetails(position);
+            if(position == 3){
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                startActivity(intent);
+            }else {
+                Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+                startActivity(intent);
+            }
         }
     };
 }

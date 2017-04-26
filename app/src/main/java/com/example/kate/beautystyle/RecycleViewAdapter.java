@@ -42,6 +42,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             public void onClick(View v) {
                 int position = contactViewHolder.getAdapterPosition();
                 if (position == RecyclerView.NO_POSITION) return;
+                NumberOfDetails.setNumber1ForDetails(contactViewHolder.getAdapterPosition());
                 clickListener.onNameClick(position, strings[position]);
             }
         });
@@ -78,6 +79,9 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
                     break;
                 case "Маникюр":
                     url = "http://dogcity.com.ua/wp-content/uploads/2017/01/IMG_9697.jpg";
+                    break;
+                case "Наш адрес":
+                    url = "http://download.seaicons.com/icons/paomedia/small-n-flat/1024/map-marker-icon.png";
                     break;
                 default:
                     break;
