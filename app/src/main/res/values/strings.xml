@@ -41,8 +41,7 @@
     </string-array>
 
     <string-array name="painting_details_url">
-        <item>http://izbyshki.ru/L2nD2Vd7BX58HAgTcRQoxL3fuWV1pdJG2aH/upload/2014-09/38955ac30be7ec
-            _1411306132_55145.jpg</item>
+        <item>http://izbyshki.ru/L2nD2Vd7BX58HAgTcRQoxL3fuWV1pdJG2aH/upload/2014-09/38955ac30be7ec_1411306132_55145.jpg</item>
         <item>http://animal-store.ru/img/2015/050317/3455622</item>
         <item>http://hammarlund.ru/MG_2014/I12/505080_487497.jpg</item>
     </string-array>
@@ -66,13 +65,11 @@
         <item>Хозяйка и питомец должны быть в одном стиле.</item>
     </string-array>
 
-    <string name="geo">http://a1669.phobos.apple.com/us/r30/Purple5/v4/cd/e1/76/cde176f6-cf2e-
-        be20-3ffb-a8cd9beb14d4/mzl.lwhobwbx.jpg</string>
+    <string name="geo">http://a1669.phobos.apple.com/us/r30/Purple5/v4/cd/e1/76/cde176f6-cf2e-be20-3ffb-a8cd9beb14d4/mzl.lwhobwbx.jpg</string>
     <string name="geo_info">Мы находимся по адресу: село Простоквашино, улица Собаки Павлова 1.
-        Рады вас видеть кргулые сутки!</string>
+        Рады вас видеть кругулые сутки!</string>
     <string name="furcut_img">https://pp.userapi.com/c405124/v405124786/532d/mU3dY12rZhM.jpg</string>
-    <string name="painting_img">http://n1s2.hsmedia.ru/41/6b/73/416b7303e40fb2ce0a4ba26786f33c63/600
-        x322_1_c095cd8a5d2cff6e98ac8691784f1db4@600x322_0x59f91261_17955022721411752153.jpeg</string>
+    <string name="painting_img">http://n1s2.hsmedia.ru/41/6b/73/416b7303e40fb2ce0a4ba26786f33c63/600x322_1_c095cd8a5d2cff6e98ac8691784f1db4@600x322_0x59f91261_17955022721411752153.jpeg</string>
     <string name="manicure_img">http://dogcity.com.ua/wp-content/uploads/2017/01/IMG_9697.jpg</string>
     <string name="main_img">http://www.dandy-dogs.ru/template/images/banner2.png</string>
 </resources>

@@ -26,13 +26,15 @@ public class MainActivity extends AppCompatActivity {
                 .load(getString(R.string.main_img))
                 .into(imageView);
 
-        recyclerViewAdapter = new RecycleViewAdapter(this, getResources().getStringArray(R.array.services),onNameClickListener);
+        recyclerViewAdapter = new RecycleViewAdapter(this, getResources()
+                .getStringArray(R.array.services),onNameClickListener);
 
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    RecycleViewAdapter.OnNameClickListener onNameClickListener = new RecycleViewAdapter.OnNameClickListener() {
+    RecycleViewAdapter.OnNameClickListener onNameClickListener = new RecycleViewAdapter
+            .OnNameClickListener() {
         @Override
         public void onNameClick(int position, String name) {
             NumberForDetails.setNumber1ForDetails(position);
