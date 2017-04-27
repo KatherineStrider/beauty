@@ -10,9 +10,10 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    ImageView imageView;
-    RecycleViewAdapter recyclerViewAdapter;
+    private RecyclerView recyclerView;
+    private ImageView imageView;
+    private RecycleViewAdapter recyclerViewAdapter;
+    private int posForGeo = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycleView);
 
         Picasso.with(this)
-                .load("http://www.dandy-dogs.ru/template/images/banner2.png")
+                .load(getString(R.string.main_img))
                 .into(imageView);
 
         recyclerViewAdapter = new RecycleViewAdapter(this, getResources().getStringArray(R.array.services),onNameClickListener);
@@ -34,9 +35,8 @@ public class MainActivity extends AppCompatActivity {
     RecycleViewAdapter.OnNameClickListener onNameClickListener = new RecycleViewAdapter.OnNameClickListener() {
         @Override
         public void onNameClick(int position, String name) {
-//            Toast.makeText(MainActivity.this, String.format("%s #%d", name, position), Toast.LENGTH_SHORT).show();
-            NumberOfDetails.setNumber1ForDetails(position);
-            if(position == 3){
+            NumberForDetails.setNumber1ForDetails(position);
+            if(position == posForGeo){
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 startActivity(intent);
             }else {

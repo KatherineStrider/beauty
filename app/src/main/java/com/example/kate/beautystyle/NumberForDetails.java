@@ -4,7 +4,7 @@ package com.example.kate.beautystyle;
  * Created by Kate on 26.04.2017.
  */
 
-public class NumberOfDetails {
+public class NumberForDetails {
 
     public static int num1;
     public static int num2;

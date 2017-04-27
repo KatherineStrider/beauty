@@ -25,4 +25,54 @@
         <item>Покрытие лаком для собак</item>
         <item>Покрытие лаком для котов</item>
     </string-array>
+
+    <string-array name="furcut_details_url">
+        <item>http://lalapanda.ru/media/cache/f9/05/f9050e8d6a838d01b8e65aa05fab6974.jpg</item>
+        <item>https://livefomdet.ru/uploads/images/f/o/t/foto_strizhek_kotov_3.jpg</item>
+        <item>http://bigpicture.ru/wp-content/uploads/2015/04/square_011.jpg</item>
+    </string-array>
+
+    <string-array name="furcut_details_info">
+        <item>Постригите своего кота под льва, и ваш любимец вмиг станет самым модным чудовищем
+            в вашем доме.</item>
+        <item>Если вам кажется, что все стрижки уже заезжены и избиты, мы можем предложить вам
+        совсем необычный вариант - стрижку под дракона. Внимание, покраска идет отдельно.</item>
+        <item>Квадратные стрижки - вот тренд сезона!</item>
+    </string-array>
+
+    <string-array name="painting_details_url">
+        <item>http://izbyshki.ru/L2nD2Vd7BX58HAgTcRQoxL3fuWV1pdJG2aH/upload/2014-09/38955ac30be7ec
+            _1411306132_55145.jpg</item>
+        <item>http://animal-store.ru/img/2015/050317/3455622</item>
+        <item>http://hammarlund.ru/MG_2014/I12/505080_487497.jpg</item>
+    </string-array>
+
+    <string-array name="painting_details_info">
+        <item>Если вы хотите дополнить стрижку под дракона, рекомендуем покрасить любимца в
+        зеленый цвет. Главное, не перепутайте его с ящерицей и не пытайтесь оторвать хвост.</item>
+        <item>Тигровый покрас - и ваш милейший питомец пугает всех, включая вас!</item>
+        <item>Розовый кот - для самых гламууууурных.</item>
+    </string-array>
+
+    <string-array name="manicure_details_url">
+        <item>https://i12.fotocdn.net/s13/80/public_pin_l/144/2362740559.jpg</item>
+        <item>http://trendy-puppy.ru.fastsite.ru/uploads/20161219/Dogsi-9.jpg</item>
+        <item>http://ahaba.ru/userimages/49510-800-600.jpg</item>
+    </string-array>
+
+    <string-array name="manicure_details_info">
+        <item>Постригите, наконец, ногти своему питомцу!</item>
+        <item>Стильно, модно, молодежно!</item>
+        <item>Хозяйка и питомец должны быть в одном стиле.</item>
+    </string-array>
+
+    <string name="geo">http://a1669.phobos.apple.com/us/r30/Purple5/v4/cd/e1/76/cde176f6-cf2e-
+        be20-3ffb-a8cd9beb14d4/mzl.lwhobwbx.jpg</string>
+    <string name="geo_info">Мы находимся по адресу: село Простоквашино, улица Собаки Павлова 1.
+        Рады вас видеть кргулые сутки!</string>
+    <string name="furcut_img">https://pp.userapi.com/c405124/v405124786/532d/mU3dY12rZhM.jpg</string>
+    <string name="painting_img">http://n1s2.hsmedia.ru/41/6b/73/416b7303e40fb2ce0a4ba26786f33c63/600
+        x322_1_c095cd8a5d2cff6e98ac8691784f1db4@600x322_0x59f91261_17955022721411752153.jpeg</string>
+    <string name="manicure_img">http://dogcity.com.ua/wp-content/uploads/2017/01/IMG_9697.jpg</string>
+    <string name="main_img">http://www.dandy-dogs.ru/template/images/banner2.png</string>
 </resources>

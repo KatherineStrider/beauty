@@ -27,26 +27,16 @@ public class ServiceActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                NumberOfDetails.setNumber2ForDetails(position);
+                NumberForDetails.setNumber2ForDetails(position);
                 Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
                 startActivity(intent);
-                switch (position){
-                    case 0:
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    default:
-                        break;
-                }
             }
         });
     }
 
     private String[] getType(){
 
-        int i = NumberOfDetails.num1;
+        int i = NumberForDetails.num1;
         String[] arr;
 
         switch (i){
