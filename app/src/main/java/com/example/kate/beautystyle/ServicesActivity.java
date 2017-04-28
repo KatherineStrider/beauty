@@ -49,7 +49,7 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
 //        }
         else {
             super.onBackPressed();
-            this.finish();
+//            this.finish();
         }
     }
 
