@@ -17,6 +17,7 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
 
     Fragment fragment_list;
     Fragment fragment_detail;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,19 +34,7 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
 
     @Override
     public void onServiceClick() {
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.frame_for_detail, fragment_detail, DetailInfo.TAG)
-                    .addToBackStack(DetailInfo.TAG)
-                    .commit();
-        } else {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.frame, fragment_detail, DetailInfo.TAG)
-                    .addToBackStack(DetailInfo.TAG)
-                    .commit();
-        }
+        setFragments();
     }
 
     @Override
@@ -74,6 +63,11 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
 
+        setFragments();
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    private void setFragments() {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             getSupportFragmentManager()
                     .beginTransaction()
@@ -87,6 +81,5 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
                     .addToBackStack(DetailInfo.TAG)
                     .commit();
         }
-        super.onRestoreInstanceState(savedInstanceState);
     }
 }
