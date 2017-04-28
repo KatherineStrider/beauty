@@ -51,6 +51,9 @@ public class ServicesInfo extends ListFragment {
             case 2:
                 arr = getResources().getStringArray(R.array.services_manicure);
                 break;
+            case 3:
+                arr = getResources().getStringArray(R.array.services_geo);
+                break;
             default:
                 arr = null;
                 break;

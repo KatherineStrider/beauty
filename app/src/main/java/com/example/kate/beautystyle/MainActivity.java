@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onNameClick(int position, String name) {
             NumberForDetails.setNumber1ForDetails(position);
-                Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
-                startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
+            startActivity(intent);
         }
     };
 }

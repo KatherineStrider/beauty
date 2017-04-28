@@ -26,6 +26,11 @@
         <item>Покрытие лаком для котов</item>
     </string-array>
 
+    <string-array name="services_geo">
+        <item>Самарская область</item>
+        <item>Оренбургская область</item>
+    </string-array>
+
     <string-array name="furcut_details_url">
         <item>http://lalapanda.ru/media/cache/f9/05/f9050e8d6a838d01b8e65aa05fab6974.jpg</item>
         <item>https://livefomdet.ru/uploads/images/f/o/t/foto_strizhek_kotov_3.jpg</item>
