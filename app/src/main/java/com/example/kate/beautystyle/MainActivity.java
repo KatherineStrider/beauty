@@ -1,8 +1,10 @@
 package com.example.kate.beautystyle;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ImageView imageView;
     private RecycleViewAdapter recyclerViewAdapter;
-    private int posForGeo = 3;
+    private final int posForGeo = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,12 @@ public class MainActivity extends AppCompatActivity {
                 .getStringArray(R.array.services),onNameClickListener);
 
         recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        }else {
+            recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+
+        }
     }
 
     RecycleViewAdapter.OnNameClickListener onNameClickListener = new RecycleViewAdapter
