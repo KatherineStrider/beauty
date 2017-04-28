@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.example.kate.beautystyle.fragments.DetailInfo;
 import com.example.kate.beautystyle.fragments.ServicesInfo;
@@ -16,16 +15,18 @@ import com.example.kate.beautystyle.fragments.ServicesInfo;
 
 public class ServicesActivity extends AppCompatActivity implements OnServiceClickListener {
 
-    Fragment fragment;
+    Fragment fragment_list;
+    Fragment fragment_detail;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
-        Log.d("supertag", "Мы в Services");
+        fragment_detail = DetailInfo.getInstance();
+        fragment_list = ServicesInfo.getInstance();
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.frame, ServicesInfo.getInstance(), ServicesInfo.TAG)
+                .replace(R.id.frame, fragment_list, ServicesInfo.TAG)
                 .addToBackStack(ServicesInfo.TAG)
                 .commit();
     }
@@ -35,13 +36,13 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frame_for_detail, DetailInfo.getInstance(), DetailInfo.TAG)
+                    .replace(R.id.frame_for_detail, fragment_detail, DetailInfo.TAG)
                     .addToBackStack(DetailInfo.TAG)
                     .commit();
         } else {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frame, DetailInfo.getInstance(), DetailInfo.TAG)
+                    .replace(R.id.frame, fragment_detail, DetailInfo.TAG)
                     .addToBackStack(DetailInfo.TAG)
                     .commit();
         }
@@ -63,13 +64,29 @@ public class ServicesActivity extends AppCompatActivity implements OnServiceClic
         }
     }
 
-//    @Override
-//    protected void onSaveInstanceState(Bundle outState) {
-//        super.onSaveInstanceState(outState);
-//    }
-//
-//    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-//        super.onRestoreInstanceState(savedInstanceState);
-//    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+        getSupportFragmentManager().saveFragmentInstanceState(fragment_detail);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frame_for_detail, fragment_detail, DetailInfo.TAG)
+                    .addToBackStack(DetailInfo.TAG)
+                    .commit();
+        } else {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frame, fragment_detail, DetailInfo.TAG)
+                    .addToBackStack(DetailInfo.TAG)
+                    .commit();
+        }
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 }
