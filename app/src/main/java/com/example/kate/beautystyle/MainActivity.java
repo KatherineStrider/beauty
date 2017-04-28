@@ -45,13 +45,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onNameClick(int position, String name) {
             NumberForDetails.setNumber1ForDetails(position);
-            if(position == posForGeo){
-                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
                 startActivity(intent);
-            }else {
-                Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
-                startActivity(intent);
-            }
         }
     };
 }
